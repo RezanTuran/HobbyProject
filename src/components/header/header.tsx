@@ -41,7 +41,7 @@ const Header = (props: any) => {
 
   return (
     <Grid className={classes.root}>
-      <AppBar position="static" style={{ backgroundColor: 'black' }}>
+      <AppBar position="static" className={classes.appbar}>
         <Toolbar>
           <Typography
             variant="h6"
@@ -49,11 +49,7 @@ const Header = (props: any) => {
             onClick={() => handleButtonClick('/')}
             style={{ cursor: 'pointer' }}
           >
-            <img
-              style={{ width: '8em', display: 'flex' }}
-              src={MossensLogo}
-              alt="logo"
-            />
+            <img className={classes.logo} src={MossensLogo} alt="logo" />
           </Typography>
           {isMobile ? (
             <>
@@ -64,7 +60,7 @@ const Header = (props: any) => {
                 aria-label="menu"
                 onClick={handleMenu}
               >
-                <MenuIcon style={{ fontSize: '2em' }} />
+                <MenuIcon className={classes.menuIcon} />
               </IconButton>
               <Menu
                 id="menu-appbar"
@@ -81,10 +77,13 @@ const Header = (props: any) => {
                 open={open}
                 onClose={() => setAnchorEl(null)}
               >
-                {menuItems.map((menuItem) => {
+                {menuItems.map((menuItem: any, index: number) => {
                   const { menuTitle, pageURL } = menuItem;
                   return (
-                    <MenuItem onClick={() => handleMenuClick(pageURL)}>
+                    <MenuItem
+                      key={index}
+                      onClick={() => handleMenuClick(pageURL)}
+                    >
                       {menuTitle}
                     </MenuItem>
                   );
@@ -110,7 +109,7 @@ const Header = (props: any) => {
           <Button
             variant="contained"
             onClick={() => handleButtonClick('/login')}
-            style={{ backgroundColor: '#c1a35f', fontWeight: 'bolder' }}
+            className={classes.loginButton}
             startIcon={<PersonIcon />}
           >
             Logga in

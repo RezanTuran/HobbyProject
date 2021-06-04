@@ -2,12 +2,12 @@ import { menuItemsInterface } from './types';
 
 const menuItems: menuItemsInterface[] = [
   {
-    menuTitle: 'Home',
+    menuTitle: 'Hem',
     pageURL: '/',
   },
 
   {
-    menuTitle: 'Menu',
+    menuTitle: 'Meny',
     pageURL: '/menu',
   },
 ];

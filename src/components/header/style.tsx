@@ -4,6 +4,20 @@ export default makeStyles((theme: Theme) => ({
   root: {
     flexGrow: 1,
   },
+  appbar: {
+    backgroundColor: 'black',
+  },
+  logo: {
+    width: '8em',
+    display: 'flex',
+  },
+  menuIcon: {
+    fontSize: '2em',
+  },
+  loginButton: {
+    backgroundColor: '#c1a35f',
+    fontWeight: 'bolder',
+  },
   menuButton: {
     marginRight: theme.spacing(2),
   },
