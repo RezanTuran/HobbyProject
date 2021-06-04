@@ -105,24 +105,6 @@ const Header = (props: any) => {
               >
                 MENY
               </Button>
-              <Button
-                className={classes.navColor}
-                onClick={() => handleButtonClick('/contact')}
-              >
-                KONTAKT
-              </Button>
-              <Button
-                className={classes.navColor}
-                onClick={() => handleButtonClick('/about')}
-              >
-                OM OSS
-              </Button>
-              <Button
-                className={classes.navColor}
-                onClick={() => handleButtonClick('/galery')}
-              >
-                GALERY
-              </Button>
             </Grid>
           )}
           <Button
