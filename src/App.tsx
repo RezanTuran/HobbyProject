@@ -4,13 +4,13 @@ import Grid from '@material-ui/core/Grid';
 import Router from './router/router';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <Grid>
       <Header />
       <Router />
     </Grid>
   );
-}
+};
 
 export default App;
